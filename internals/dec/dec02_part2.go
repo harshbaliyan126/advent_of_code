@@ -23,7 +23,9 @@ func Dec02AocPart2() int {
 	i := 1
 
 	powerSetSum := 0
-
+	
+	colorCount := map[string]int{"red": 0, "blue": 0, "green": 0}
+	
 	for scanner.Scan() {
 		line := scanner.Text()
 
@@ -32,7 +34,7 @@ func Dec02AocPart2() int {
 
 		gameSession := strings.Split(parts[1], ";")
 
-		colorCount := map[string]int{"red": 0, "blue": 0, "green": 0}
+		
 
 		for _, session := range gameSession {
 
